@@ -58,53 +58,54 @@ function Nav() {
 
   return (
     <div>
-      {/* <div>{scroll === false ? "" : <Navprop />}</div> */}
       {wider.width > 768 ? (
-        <div className={isBeingScrolled}>
-          <div>
-            <a href="/">
-              <img className={ctlImg} src={logo} alt="" />
-            </a>
-          </div>
-          <div className={ctlName}>
-            <h1 className={ctlNameName}>Oscar Daniel</h1>
-            <h3 className={ctrlProfressions}>Web-Developer</h3>
-          </div>
-
-          <ul className={links}>
-            <div className="flex justify-between">
-              <a
-                className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
-                href="http://"
-              >
-                About
-              </a>
-              <a
-                className="  ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                href="/"
-              >
-                Figma
-              </a>
-              <a
-                className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                href="/"
-              >
-                Home
-              </a>
-              <a
-                className="   ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                href="https://www.linkedin.com/in/front-js-developer/"
-              >
-                LinkedIn
-              </a>
-              <a
-                className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                href="https://github.com/Danielt3000"
-              >
-                Github
+        <div>
+          <div>{scroll === true ? <Navprop /> : ""}</div>
+          <div className={isBeingScrolled}>
+            <div>
+              <a href="/">
+                <img className={ctlImg} src={logo} alt="" />
               </a>
             </div>
-          </ul>
+            <div className={ctlName}>
+              <h1 className={ctlNameName}>Oscar Daniel</h1>
+              <h3 className={ctrlProfressions}>Web-Developer</h3>
+            </div>
+            <ul className={links}>
+              <div className="flex justify-between">
+                <a
+                  className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
+                  href="/about"
+                >
+                  About
+                </a>
+                <a
+                  className="  ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
+                  href="/projects"
+                >
+                  Projects
+                </a>
+                <Link
+                  className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
+                  to="/contact"
+                >
+                  Contact
+                </Link>
+                <a
+                  className="   ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
+                  href="https://www.linkedin.com/in/front-js-developer/"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
+                  href="/"
+                >
+                  Home
+                </a>
+              </div>
+            </ul>
+          </div>
         </div>
       ) : (
         <NavMobile />

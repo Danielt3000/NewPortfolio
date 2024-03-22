@@ -71,7 +71,7 @@ function Skills() {
   const [state, dispatch] = useReducer(changer, initialState);
 
   return (
-    <div className="max-md:w-10/12 mx-auto">
+    <div className=" max-md:w-10/12 mx-auto">
       <div className="flex  justify-around max-md:mt-10  text-xl font-bold md:text-xl  ">
         <button
           className={state.skills ? "un2" : "un "}

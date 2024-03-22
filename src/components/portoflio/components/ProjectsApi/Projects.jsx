@@ -22,7 +22,7 @@ function Test() {
   }, []);
 
   return (
-    <>
+    <div className="border border-x-2 border-portfolio_main ">
       <div className="projects-body  mb-10  ">
         <div className=" text-center mt-10 ">
           <h1 className=" text-pt_second text-sm">
@@ -51,11 +51,7 @@ function Test() {
                     <h4 className="ml-3 mt-3 text-black font-bold ">
                       {data.name}
                     </h4>
-                    <img
-                      className=""
-                      src={logos}
-                      alt=""
-                    />
+                    <img className="" src={logos} alt="" />
                   </div>
 
                   <div className="px-3">
@@ -67,7 +63,7 @@ function Test() {
                     </p>
                   </div>
                   <div className="  bg-[#1C1E3D] mt-1 font-bold">
-                    <h4 className="p-2 text-pt_second">Technology's Links</h4>
+                    <h4 className="p-2 text-pt_second">Technology's</h4>
                   </div>
                   <div className="">
                     <div className="flex mt-3  justify-around">
@@ -102,7 +98,7 @@ function Test() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

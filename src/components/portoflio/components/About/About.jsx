@@ -9,14 +9,14 @@ function About() {
   const [time, setTime] = useState();
   const [myTime, setMyTime] = useState();
 
- 
+  useEffect(() => {
     setInterval(() => {
       let s = new Date().toLocaleTimeString();
 
       let newS = s.slice(0, 5);
       let newese = s.slice(-2);
       const dates = newS.concat(" ", newese);
-      console.log(newS);
+
       setTime(dates);
 
       let d = new Date().toLocaleTimeString("en", {
@@ -28,6 +28,8 @@ function About() {
       setMyTime(MyDates);
     }, 60000);
 
+    return () => {};
+  }, []);
 
   return (
     <div className="flex max-md:flex-col-reverse mx-auto justify-center mt-2">

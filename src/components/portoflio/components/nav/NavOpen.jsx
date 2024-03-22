@@ -10,11 +10,19 @@ function navOpen() {
     <div className="fixed">
       <ul className={`list nav__list`}>
         <div className="modalOpen">
-          <div className="modalOpen--page-socials">
+          <div className="modalOpen--page-socials mt-10">
             <img
               className="modalOpen--camping animate__animated animate__fadeInDown "
               src={camp}
             />
+            <li className="modalOpen--links   animate__animated animate__fadeInLeft ">
+              <a
+                className="modalOpen__link"
+                href="https://www.linkedin.com/in/oscar-g-daniel/"
+              >
+                Contact
+              </a>
+            </li>
             <li className="modalOpen--links   animate__animated animate__fadeInLeft">
               <a
                 className="modalOpen__link"
@@ -45,7 +53,7 @@ function navOpen() {
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">
               <a className="modalOpen__link" href="#">
-                Figma
+                Projects
               </a>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">

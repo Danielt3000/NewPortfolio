@@ -10,7 +10,7 @@ function Navprop() {
     <div className="flex text-white justify-center  ">
       <div>
         <a href="/">
-          <img className="w-40" src={logo} alt="" />
+          <img className="w-24" src={logo} alt="" />
         </a>
       </div>
       <div className="text-center mt-3 mx-10 xl:ml-24">
