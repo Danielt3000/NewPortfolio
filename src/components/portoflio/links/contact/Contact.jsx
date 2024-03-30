@@ -25,11 +25,11 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className=" text-white   max:md-text-center bg-[#000000bc]  border border-y-2 border-pt_second    px-4">
+      <div className=" text-white   max:md-text-center bg-[#000000bc]  border border-y-2 border-pt_second  border-x-0   px-4">
         <div className="mt-10 md:flex justify-around max-w-[800px] mx-auto">
           <div className="md:mt-10 md:w-[320px]">
             <h1 className=" text-3xl  text-center  md:text-4xl font-bold underline underline-offset-2 md:w-[200px]  ">
-              Keep In Touch
+              "Keep In Touch"
             </h1>
             <h3 className="max:md-mx-auto  text-xl md:text-2xl mt-20 italic   ">
               “I build scalable projects and have experience in UX and UI
@@ -108,7 +108,7 @@ function Contact() {
                     rows="6"
                   ></textarea>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mb-7">
                   <button className=" bg-pt_second px-3  py-2 md:px-6 md:py-3 rounded-2xl border-2 border-black shao transition hover:scale-110  max-md:mt-5  max-md:w-40  mt-5">
                     <h1 className=" strokes text-white font-bold text-xl md:text-2xl">
                       Lest Talk

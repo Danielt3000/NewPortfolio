@@ -72,7 +72,7 @@ function Skills() {
 
   return (
     <div className=" max-md:w-10/12 mx-auto">
-      <div className="flex  justify-around max-md:mt-10  text-xl font-bold md:text-xl  ">
+      <div className="flex  justify-around max-md:mt-10  text-[16px]  sm:text-xl font-bold ">
         <button
           className={state.skills ? "un2" : "un "}
           onClick={() => {
@@ -101,7 +101,7 @@ function Skills() {
           Education
         </button>
       </div>
-      <div className=" text-left max-md:ml-10 mt-10 xl:ml-2">
+      <div className=" text-left  mt-10 xl:ml-2">
         <div>
           <h4 className=" text-pt_second font-bold md:text-base ">
             {state.firsttime}

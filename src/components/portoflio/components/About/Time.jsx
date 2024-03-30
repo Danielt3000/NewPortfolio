@@ -4,7 +4,7 @@ function Time() {
   const [time, setTime] = useState();
   const [myTime, setMyTime] = useState();
   useEffect(() => {
-    // Function to update time states
+    
     const updateTime = () => {
       let s = new Date().toLocaleTimeString();
 

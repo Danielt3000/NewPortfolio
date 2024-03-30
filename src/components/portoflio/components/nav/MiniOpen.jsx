@@ -1,24 +1,25 @@
 import React from "react";
 import "./miniopen.css";
+import { Link } from "react-router-dom";
 
 function MiniOpen() {
   return (
     <div className="animate__animated animate__zoomIn">
       <ul className="mini">
         <li className="mini--lis">
-          <a className="mini--links" href="#">
+          <a className="mini--links" href="/">
             Home
           </a>
         </li>
         <li className="mini--lis">
-          <a className="mini--links" href="#">
+          <Link className="mini--links" to="/">
             Figma
-          </a>
+          </Link>
         </li>
         <li className="mini--lis">
-          <a className="mini--links" href="#">
+          <Link className="mini--links" to="/About">
             About
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

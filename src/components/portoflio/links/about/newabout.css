@@ -1,0 +1,7 @@
+.contact_back {
+    background-image: url(./assets/cover.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    height: 400px;
+}

@@ -26,6 +26,10 @@ module.exports = {
 
         ...defaultTheme.screens,
       },
+      gridTemplateColumns: {
+        auto: "repeat(auto-fit, minmax(600px,1fr))",
+        autosmall: "repeat(auto-fit, minmax(300px,1fr))",
+      },
     },
   },
   plugins: [],

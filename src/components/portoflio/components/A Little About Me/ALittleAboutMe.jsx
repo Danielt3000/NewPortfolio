@@ -8,7 +8,7 @@ import Skills from "./Skills";
 AOS.init();
 function ALittleAboutMe() {
   return (
-    <div className="bg-[#000000bc] border border-y-2 border-pt_second ">
+    <div className="bg-[#000000bc] border border-y-2 border-pt_second border-x-0 ">
       <div className=" text-white p-5 text-center m-auto xL:w-9/12 xl:w-7/12 ">
         <div>
           <div>
@@ -21,7 +21,7 @@ function ALittleAboutMe() {
           </div>
           <div className="sm:flex sm:justify-around ">
             <div className=" text-left  md:w-10/12  mt-10  md:mt-14 ">
-              <img className="max-sm:ml-16 mt-8" src={wizzard} alt="" />
+              <img className=" mt-8" src={wizzard} alt="" />
               <h1 className="max-sm:text-center text-pt_third  text-base mb-8  font-bold">
                 Creative Web Wizard Building Cool Stuff
               </h1>

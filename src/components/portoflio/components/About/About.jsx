@@ -8,27 +8,53 @@ import { Link } from "react-router-dom";
 function About() {
   const [time, setTime] = useState();
   const [myTime, setMyTime] = useState();
-
   useEffect(() => {
-    setInterval(() => {
+    const updateTime = () => {
       let s = new Date().toLocaleTimeString();
 
-      let newS = s.slice(0, 5);
-      let newese = s.slice(-2);
-      const dates = newS.concat(" ", newese);
+      let newArray = [];
 
-      setTime(dates);
+      for (let i = 0; i < s.length; i++) {
+        newArray.push(s[i]);
+      }
+
+      let otherarray =
+        newArray[0] +
+        newArray[1] +
+        newArray[2] +
+        newArray[3] +
+        " " +
+        newArray[8] +
+        newArray[9];
+      setTime(otherarray);
 
       let d = new Date().toLocaleTimeString("en", {
         timeZone: "America/Los_Angeles",
       });
-      let newD = d.slice(0, 5);
-      let neweseD = d.slice(-2);
-      const MyDates = newD.concat(" ", neweseD);
-      setMyTime(MyDates);
-    }, 60000);
 
-    return () => {};
+      let mydatesArray = [];
+
+      for (let i = 0; i < d.length; i++) {
+        mydatesArray.push(d[i]);
+      }
+
+      let MyDates =
+        mydatesArray[0] +
+        mydatesArray[1] +
+        mydatesArray[2] +
+        mydatesArray[3] +
+        " " +
+        mydatesArray[8] +
+        mydatesArray[9];
+
+      setMyTime(MyDates);
+    };
+
+    updateTime();
+
+    const intervalId = setInterval(updateTime, 60000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (

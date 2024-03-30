@@ -20,12 +20,12 @@ function Navprop() {
 
       <ul className="flex font-bold text-base xl:text-2xl my-auto  xl:ml-32 tansition easy-in">
         <div className="flex justify-between">
-          <a
+          <Link
             className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
-            href="http://"
+            to="/About"
           >
             About
-          </a>
+          </Link>
           <a
             className="  ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
             href="/"

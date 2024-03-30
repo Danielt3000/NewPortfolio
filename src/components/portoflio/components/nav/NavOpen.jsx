@@ -4,6 +4,7 @@ import camp from "../img/Camping.svg";
 import ocean from "../img/Ocean.svg";
 import line1 from "../img/line1.svg";
 import line2 from "../img/linea2.svg";
+import { Link } from "react-router-dom";
 
 function navOpen() {
   return (
@@ -32,7 +33,10 @@ function navOpen() {
               </a>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInLeft">
-              <a className="modalOpen__link" href="https://github.com/Danielt3000">
+              <a
+                className="modalOpen__link"
+                href="https://github.com/Danielt3000"
+              >
                 Github
               </a>
             </li>
@@ -52,14 +56,14 @@ function navOpen() {
               </a>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">
-              <a className="modalOpen__link" href="#">
+              <Link className="modalOpen__link" to="/Projects">
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">
-              <a className="modalOpen__link" href="#">
+              <Link className="modalOpen__link" to="/About">
                 About
-              </a>
+              </Link>
             </li>
           </div>
         </div>

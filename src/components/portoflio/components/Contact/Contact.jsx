@@ -2,16 +2,16 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className=" bg-[#000000bc] py-3 border border-y-2 border-pt_second ">
-      <div className="text-center mt-10  ">
+    <div className=" bg-[#000000bc] py-3 border border-y-2 border-x-0 border-pt_second  ">
+      <div className="text-center mt-10 mb-6  ">
         <h1 className=" text-pt_second text-sm">
           Connecting for Coding Opportunities!
         </h1>
-        <h1 className=" font-bold  mt-5 text-2xl  md:text-4xl text-white ">
+        <h1 className=" font-bold  mt-5 text-xl  md:text-4xl text-white ">
           "Connect with Me: Get in Touch to Chat Code"
         </h1>
         <div className="flex max-midxl:flex-col mx-auto mt-10  xl:w-[1000px]">
-          <form className="text-white w-[310] md:w-[372px] mx-auto">
+          <form className="text-white w-[290px] md:w-[372px] mx-auto">
             <div>
               <h1 className=" text-left mb-1">Full Name:</h1>
               <input
@@ -66,7 +66,7 @@ function Contact() {
           </form>
           <div className="mx-auto mt-6">
             <img
-              className="  h-[300px] w-[310px]      bg-black rounded-xl"
+              className="  h-[250px] w-[250px] bg-black rounded-xl"
               src=""
               alt=""
             />

@@ -73,36 +73,36 @@ function Nav() {
             </div>
             <ul className={links}>
               <div className="flex justify-between">
-                <a
+                <Link
                   className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
-                  href="/about"
+                  to="/About"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   className="  ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                  href="/projects"
+                  to="/Projects"
                 >
                   Projects
-                </a>
+                </Link>
                 <Link
                   className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
                   to="/contact"
                 >
                   Contact
                 </Link>
-                <a
+                <Link
                   className="   ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                  href="https://www.linkedin.com/in/front-js-developer/"
+                  to="https://www.linkedin.com/in/front-js-developer/"
                 >
                   LinkedIn
-                </a>
-                <a
+                </Link>
+                <Link
                   className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
-                  href="/"
+                  to="/"
                 >
                   Home
-                </a>
+                </Link>
               </div>
             </ul>
           </div>
