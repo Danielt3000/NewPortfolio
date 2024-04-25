@@ -6,7 +6,7 @@ import Projects from "./components/ProjectsApi/Projects.jsx";
 import ALittleAboutMe from "./components/A Little About Me/ALittleAboutMe.jsx";
 import "animate.css";
 import Contact from "./components/Contact/Contact.jsx";
-
+import catAngry from "../portoflio/components/A Little About Me/assets/angry cat.jpeg";
 function App() {
   return (
     <div className="App inconsolata">
@@ -17,7 +17,7 @@ function App() {
 
       <ALittleAboutMe />
       <Projects />
-      <Contact />
+      <Contact item={catAngry} />
       <Footer />
     </div>
   );

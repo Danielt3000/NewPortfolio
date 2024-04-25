@@ -6,48 +6,33 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function About() {
-  const [time, setTime] = useState();
-  const [myTime, setMyTime] = useState();
+  const [time, setTime] = useState("");
+  const [myTime, setMyTime] = useState("");
+
   useEffect(() => {
     const updateTime = () => {
-      let s = new Date().toLocaleTimeString();
+      const currentTime = new Date();
+      const currentHours = currentTime.getHours().toString().padStart(2, "0");
+      const currentMinutes = currentTime
+        .getMinutes()
+        .toString()
+        .padStart(2, "0");
+      const currentAmPm = currentTime.getHours() >= 12 ? "PM" : "AM";
+      setTime(`${currentHours}:${currentMinutes} ${currentAmPm}`);
 
-      let newArray = [];
-
-      for (let i = 0; i < s.length; i++) {
-        newArray.push(s[i]);
-      }
-
-      let otherarray =
-        newArray[0] +
-        newArray[1] +
-        newArray[2] +
-        newArray[3] +
-        " " +
-        newArray[8] +
-        newArray[9];
-      setTime(otherarray);
-
-      let d = new Date().toLocaleTimeString("en", {
-        timeZone: "America/Los_Angeles",
-      });
-
-      let mydatesArray = [];
-
-      for (let i = 0; i < d.length; i++) {
-        mydatesArray.push(d[i]);
-      }
-
-      let MyDates =
-        mydatesArray[0] +
-        mydatesArray[1] +
-        mydatesArray[2] +
-        mydatesArray[3] +
-        " " +
-        mydatesArray[8] +
-        mydatesArray[9];
-
-      setMyTime(MyDates);
+      const losAngelesTime = new Date(
+        currentTime.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+      );
+      const losAngelesHours = losAngelesTime
+        .getHours()
+        .toString()
+        .padStart(2, "0");
+      const losAngelesMinutes = losAngelesTime
+        .getMinutes()
+        .toString()
+        .padStart(2, "0");
+      const losAngelesAmPm = losAngelesTime.getHours() >= 12 ? "PM" : "AM";
+      setMyTime(`${losAngelesHours}:${losAngelesMinutes} ${losAngelesAmPm}`);
     };
 
     updateTime();
@@ -74,10 +59,10 @@ function About() {
         </section>
         <button className=" bg-pt_second px-4  py-3 md:px-6 md:py-3 rounded-2xl border-2 border-black shao md:relative bottom-5  z-1 transition hover:scale-110  max-md:mt-5  max-md:w-40 mx-auto">
           <Link
-            to="/"
+            to="/contact"
             className=" strokes text-white font-bold text-xl md:text-2xl"
           >
-            Lest Talk
+            Lets Talk
           </Link>
         </button>
       </div>

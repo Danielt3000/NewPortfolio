@@ -4,7 +4,7 @@ import Nav from "../../components/nav/Nav";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
-
+import minina from "../about/assets/minina.jpg";
 function Projects() {
   const [projects, setprojects] = useState();
 
@@ -12,6 +12,7 @@ function Projects() {
     fetch(`https://danielt3k.pythonanywhere.com/projects/api/project/`)
       .then((response) => response.json())
       .then((actualData) => {
+        console.log(actualData);
         setprojects(actualData);
       });
   }, []);
@@ -22,26 +23,28 @@ function Projects() {
         <div className="contact_back  justify-center  ">
           <Nav />
           <div className=" text-center  text-white  mt-[-4rem] md:mt-[-2rem] ">
-            <h1 className=" text-[90px]  md:text-[128px] font-bold">About</h1>
+            <h1 className=" text-[90px]  md:text-[128px] font-bold">
+              Projects
+            </h1>
             <h3 className="text-xl ">
-              Discover My Skills and Passion for
+              Let's Discover How I Can Add Value to
               <br className=" text-pt_second" />
-              <span className=" text-pt_second">Collaborative Success</span>
+              <span className=" text-pt_second">Your Team</span>
             </h3>
             <div className="mx-auto   mt-[2rem] md:w-[700px]  ">
               <Time />
             </div>
           </div>
         </div>
-        <div className="text-white mt-10">
+        <div className="text-white mt-10 m-full">
           <h1 className="text-center text-2xl font-bold mb-5 md:text-4xl ">
             Projects Showcase
           </h1>
-          <div className="grid  md:grid-cols-auto  grid-cols-autosmall">
+          <div className="grid  md:grid-cols-auto  grid-cols-autosmall w-9/12 mx-auto mt-10 ">
             {projects?.map((data) => {
               return (
                 <>
-                  <div key={data.id} className="mx-auto">
+                  <div key={data.id} className="mx-auto mt-10">
                     <div className=" px-1 sm:px-8">
                       <div className="md:flex">
                         <div>
@@ -62,7 +65,7 @@ function Projects() {
 
                       <button className=" max-md:flex mx-auto w-fit  mt-10 mb-4 bg-pt_second px-[10px]  py-[8px] rounded-2xl border-2 border-black shao  transition hover:scale-110  max-md:mt-5  max-md:w-40">
                         <Link
-                          to="/"
+                          to={data.url}
                           className=" strokes text-white font-bold text-xl md:text-2xl"
                         >
                           View Website
@@ -76,7 +79,7 @@ function Projects() {
           </div>
         </div>
         <div>
-          <Contact />
+          <Contact item={minina} />
         </div>
         <Footer />
       </div>

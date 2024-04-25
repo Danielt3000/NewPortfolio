@@ -17,7 +17,13 @@ function MiniOpen() {
           </Link>
         </li>
         <li className="mini--lis">
-          <Link className="mini--links" to="/About">
+          <Link
+            onClick={() => {
+              $(document).scrollTop();
+            }}
+            className="mini--links"
+            to="/About"
+          >
             About
           </Link>
         </li>

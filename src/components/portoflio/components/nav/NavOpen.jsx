@@ -17,12 +17,9 @@ function navOpen() {
               src={camp}
             />
             <li className="modalOpen--links   animate__animated animate__fadeInLeft ">
-              <a
-                className="modalOpen__link"
-                href="https://www.linkedin.com/in/oscar-g-daniel/"
-              >
+              <Link className="modalOpen__link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="modalOpen--links   animate__animated animate__fadeInLeft">
               <a
@@ -56,12 +53,24 @@ function navOpen() {
               </a>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">
-              <Link className="modalOpen__link" to="/Projects">
+              <Link
+                onClick={() => {
+                  $(document).scrollTop();
+                }}
+                className="modalOpen__link"
+                to="/Projects"
+              >
                 Projects
               </Link>
             </li>
             <li className="modalOpen--links  animate__animated animate__fadeInRight">
-              <Link className="modalOpen__link" to="/About">
+              <Link
+                onClick={() => {
+                  $(document).scrollTop();
+                }}
+                className="modalOpen__link"
+                to="/About"
+              >
                 About
               </Link>
             </li>
@@ -73,9 +82,9 @@ function navOpen() {
         />
         <div className="selected animate__animated animate__fadeInUp">
           <img className="selected--ocean" src={mont} alt="" />
-          <a href="#" className="btn">
+          <Link to="/Projects" className="btn">
             My Selected Work
-          </a>
+          </Link>
         </div>
       </ul>
     </div>

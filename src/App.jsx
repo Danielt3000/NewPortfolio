@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Contact from "./components/portoflio/links/contact/Contact";
 import About from "./components/portoflio/links/about/About";
 import Projects from "./components/portoflio/links/projects/Projects";
+
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/Projects" element={<Projects />} />
+       
       </Routes>
     </>
   );

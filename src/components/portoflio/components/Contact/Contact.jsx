@@ -1,6 +1,6 @@
 import React from "react";
 
-function Contact() {
+function Contact(props) {
   return (
     <div className=" bg-[#000000bc] py-3 border border-y-2 border-x-0 border-pt_second  ">
       <div className="text-center mt-10 mb-6  ">
@@ -60,16 +60,12 @@ function Contact() {
             </div>
             <button className=" bg-pt_second px-3  py-2 md:px-6 md:py-3 rounded-2xl border-2 border-black shao transition hover:scale-110  max-md:mt-5  max-md:w-40  mt-5">
               <h1 className=" strokes text-white font-bold text-xl md:text-2xl">
-                Lest Talk
+                Lets Talk
               </h1>
             </button>
           </form>
-          <div className="mx-auto mt-6">
-            <img
-              className="  h-[250px] w-[250px] bg-black rounded-xl"
-              src=""
-              alt=""
-            />
+          <div className="mx-auto mt-6  w-[300px] mb-10">
+            <img className="   rounded-xl " src={props.item} alt="" />
           </div>
         </div>
       </div>

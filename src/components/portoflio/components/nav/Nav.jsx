@@ -74,30 +74,43 @@ function Nav() {
             <ul className={links}>
               <div className="flex justify-between">
                 <Link
+                  onClick={() => {
+                    $(document).scrollTop();
+                  }}
                   className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
                   to="/About"
                 >
                   About
                 </Link>
                 <Link
+                  onClick={() => {
+                    $(document).scrollTop();
+                  }}
                   className="  ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
                   to="/Projects"
                 >
                   Projects
                 </Link>
                 <Link
+                  onClick={() => {
+                    $(document).scrollTop();
+                  }}
                   className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
                   to="/contact"
                 >
                   Contact
                 </Link>
                 <Link
+                 
                   className="   ml-7 xl:ml-11   list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
                   to="https://www.linkedin.com/in/front-js-developer/"
                 >
                   LinkedIn
                 </Link>
                 <Link
+                  onClick={() => {
+                    $(document).scrollTop();
+                  }}
                   className="  ml-7 xl:ml-11    list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100   "
                   to="/"
                 >

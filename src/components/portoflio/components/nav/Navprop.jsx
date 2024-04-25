@@ -21,6 +21,9 @@ function Navprop() {
       <ul className="flex font-bold text-base xl:text-2xl my-auto  xl:ml-32 tansition easy-in">
         <div className="flex justify-between">
           <Link
+            onClick={() => {
+              $(document).scrollTop();
+            }}
             className="       list-none transition-colors   hover:text-pt_second hover:scale-125 ease-in-out delay-100 "
             to="/About"
           >

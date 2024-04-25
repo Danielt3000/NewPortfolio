@@ -33,11 +33,11 @@ function Test() {
           </h1>
         </div>
 
-        <div className="">
+        <div className="w-full flex flex-wrap  gap-6">
           {projects?.map((data) => {
             return (
               <div
-                className="card-content mx-auto my-14 w-[257px]   bg-white rounded-lg "
+                className="card-content  my-14 w-[257px]   bg-white rounded-lg m-auto "
                 key={data.id}
               >
                 <div className="opacity">

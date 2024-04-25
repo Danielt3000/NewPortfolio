@@ -4,7 +4,8 @@ import Time from "../../components/About/Time";
 import "./newabout.css";
 import Footer from "../../components/Footer/Footer";
 import Contact from "../../components/Contact/Contact";
-import cat from "./assets/cat.jpg";
+import cat from "./assets/mecat2.jpeg";
+import me from "./assets/m3.svg";
 
 function About() {
   return (
@@ -71,7 +72,7 @@ function About() {
         </div>
       </div>
       <div>
-        <Contact />
+        <Contact item={me} />
       </div>
       <Footer />
     </div>

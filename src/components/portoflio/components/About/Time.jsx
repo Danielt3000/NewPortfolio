@@ -1,40 +1,33 @@
 import React from "react";
 import { useState, useEffect } from "react";
 function Time() {
-  const [time, setTime] = useState();
-  const [myTime, setMyTime] = useState();
+  const [time, setTime] = useState("");
+  const [myTime, setMyTime] = useState("");
+
   useEffect(() => {
-    
     const updateTime = () => {
-      let s = new Date().toLocaleTimeString();
+      const currentTime = new Date();
+      const currentHours = currentTime.getHours().toString().padStart(2, "0");
+      const currentMinutes = currentTime
+        .getMinutes()
+        .toString()
+        .padStart(2, "0");
+      const currentAmPm = currentTime.getHours() >= 12 ? "PM" : "AM";
+      setTime(`${currentHours}:${currentMinutes} ${currentAmPm}`);
 
-      let newArray = [];
-
-      for (let i = 0; i < s.length; i++) {
-        newArray.push(s[i]);
-      }
-
-      let otherarray =
-        newArray[0] + newArray[1] + newArray[2] + newArray[3] + " PM";
-      setTime(otherarray);
-
-      let d = new Date().toLocaleTimeString("en", {
-        timeZone: "America/Los_Angeles",
-      });
-
-      let mydatesArray = [];
-
-      for (let i = 0; i < d.length; i++) {
-        mydatesArray.push(d[i]);
-      }
-
-      let MyDates =
-        mydatesArray[0] +
-        mydatesArray[1] +
-        mydatesArray[2] +
-        mydatesArray[3] +
-        " PM";
-      setMyTime(MyDates);
+      const losAngelesTime = new Date(
+        currentTime.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+      );
+      const losAngelesHours = losAngelesTime
+        .getHours()
+        .toString()
+        .padStart(2, "0");
+      const losAngelesMinutes = losAngelesTime
+        .getMinutes()
+        .toString()
+        .padStart(2, "0");
+      const losAngelesAmPm = losAngelesTime.getHours() >= 12 ? "PM" : "AM";
+      setMyTime(`${losAngelesHours}:${losAngelesMinutes} ${losAngelesAmPm}`);
     };
 
     updateTime();
@@ -60,3 +53,7 @@ function Time() {
 }
 
 export default Time;
+
+
+
+

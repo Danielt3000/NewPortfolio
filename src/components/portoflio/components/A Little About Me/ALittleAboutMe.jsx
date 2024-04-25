@@ -1,7 +1,8 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import randomImg from "./assets/randompng.jpg";
+import cat2 from "./assets/catprogram.jpeg";
+import cat1 from "./assets/cat1.jpg";
 import wizzard from "./assets/wizard.svg";
 import Skills from "./Skills";
 
@@ -36,7 +37,7 @@ function ALittleAboutMe() {
             </div>
             <img
               className=" ml-6 mt-10   sm:mt-40 md:mt-32 max-xs:w-9/12  w-6/12     sm:h-1/2  rounded-xl  sm:ml-5   "
-              src={randomImg}
+              src={cat1}
               alt=""
             />
           </div>
@@ -44,7 +45,7 @@ function ALittleAboutMe() {
         <div className="md:flex  sm:mt-10 ">
           <img
             className="  max-md:mx-auto max-sm:relative left-12 bottom-8 w-9/12 rounded-xl xs:w-6/12 md:mr-10 md:h-4/6 md:mt-20"
-            src={randomImg}
+            src={cat2}
             alt=""
           />
           <div className="max-md:mt-10 ">
